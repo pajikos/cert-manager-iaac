@@ -1,6 +1,7 @@
 cert-manager:
   installCRDs: true
 
+issuerName: letsencrypt-issuer
 acmeEmail: "info@example.org"
 acmeServer: https://acme-v02.api.letsencrypt.org/directory
 
