@@ -2,12 +2,14 @@ cert-manager:
   installCRDs: true
 
 acmeEmail: "info@example.org"
+acmeServer: https://acme-v02.api.letsencrypt.org/directory
 
 azure:
-  clientID: xxx
-  subscriptionID: xxx
-  tenantID: xxx
-  resourceGroupName: xxx
-  hostedZoneName: xxx
+  # clientID: xxx
+  # subscriptionID: xxx
+  # tenantID: xxx
+  # resourceGroupName: xxx
+  # hostedZoneName: xxx
   environment: AzurePublicCloud
+  # clientSecret: xxx
   

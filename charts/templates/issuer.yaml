@@ -11,14 +11,14 @@ spec:
     solvers:
     - dns01:
         azureDNS:
-          clientID: {{ default "" .Values.azure.clientID | quote }}
+          clientID: {{ required "A valid azure.clientID entry required!" .Values.azure.clientID | quote }}
           clientSecretSecretRef:
           # The following is the secret we created in Kubernetes. Issuer will use this to present challenge to Azure DNS.
             name: azuredns-config
             key: client-secret
-          subscriptionID: {{ default "" .Values.azure.subscriptionID | quote }}
-          tenantID: {{ default "" .Values.azure.tenantID | quote }}
-          resourceGroupName: {{ default "" .Values.azure.resourceGroupName | quote }}
-          hostedZoneName: {{ default "" .Values.azure.hostedZoneName | quote }}
+          subscriptionID: {{ required "A valid azure.subscriptionID entry required!" .Values.azure.subscriptionID | quote }}
+          tenantID: {{ required "A valid azure.tenantID entry required!" .Values.azure.tenantID | quote }}
+          resourceGroupName: {{ required "A valid azure.resourceGroupName entry required!" .Values.azure.resourceGroupName | quote }}
+          hostedZoneName: {{ required "A valid azure.hostedZoneName entry required!" .Values.azure.hostedZoneName | quote }}
           # Azure Cloud Environment, default to AzurePublicCloud
-          environment: {{ default "" .Values.azure.environment | quote }}
+          environment: {{ required "A valid azure.environment entry required!" .Values.azure.environment | quote }}
