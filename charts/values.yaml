@@ -1,0 +1,13 @@
+cert-manager:
+  installCRDs: true
+
+acmeEmail: "info@example.org"
+
+azure:
+  clientID: xxx
+  subscriptionID: xxx
+  tenantID: xxx
+  resourceGroupName: xxx
+  hostedZoneName: xxx
+  environment: AzurePublicCloud
+  
